@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Searchable event listings for Duke Kunshan University.">
+  <title>DKU Calendar | Events</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="events">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Duke Kunshan University Calendar home">
+        <img class="brand-logo brand-logo--light" src="assets/dku-logo-placeholder.svg" alt="Duke Kunshan University" data-asset-candidates="assets/dku-logo.svg,assets/dku-logo.png,assets/dku-logo-placeholder.svg,dku-logo.svg,dku-logo.png,logo.svg,logo.png">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav id="primary-nav" class="site-nav">
+        <a href="about.html">About</a>
+        <a href="calendar.html">Academics</a>
+        <a href="events.html" aria-current="page">Events</a>
+        <a href="calendar.html">Academic Calendar</a>
+        <a href="help.html">Contact / Help</a>
+        <a class="nav-login" href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">Events Directory</p>
+          <h1>Search and filter DKU events</h1>
+          <p>Browse academic milestones, campus life programming, deadlines, workshops, and announcements.</p>
+        </div>
+      </div>
+
+      <section class="panel">
+        <form id="events-filter-form" class="filters" autocomplete="off">
+          <label>
+            <span>Search</span>
+            <input id="search-input" type="search" placeholder="Search title, location, or description">
+          </label>
+          <label>
+            <span>Category</span>
+            <select id="category-filter">
+              <option value="All">All categories</option>
+            </select>
+          </label>
+          <label>
+            <span>Sort</span>
+            <select id="sort-order">
+              <option value="asc">Date: earliest first</option>
+              <option value="desc">Date: latest first</option>
+            </select>
+          </label>
+        </form>
+      </section>
+
+      <section class="section section-tight">
+        <div id="events-summary" class="results-summary"></div>
+        <div id="events-list" class="events-grid" aria-live="polite"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="brand-logo brand-logo--footer" src="assets/dku-logo-reversed-placeholder.svg" alt="Duke Kunshan University" data-asset-candidates="assets/dku-logo-reversed.svg,assets/dku-logo-white.png,assets/dku-logo-reversed-placeholder.svg">
+        <p class="footer-copy">Prototype university calendar for Duke Kunshan University, Kunshan, China.</p>
+      </div>
+      <div>
+        <h3>Resources</h3>
+        <a href="calendar.html">Academic Calendar</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About DKU</a>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <a href="help.html">Help & FAQ</a>
+        <a href="login.html">Testing Login</a>
+        <a href="help.html">Maps & Directions</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>No. 8 Duke Avenue, Kunshan, Jiangsu, China</p>
+        <p>Calendar prototype for local offline testing.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/events.js"></script>
+</body>
+</html>

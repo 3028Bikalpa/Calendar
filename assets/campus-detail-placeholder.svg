@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">Secondary campus placeholder</title>
+  <desc id="desc">Secondary campus illustration placeholder for about page use.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f4f8fd"/>
+      <stop offset="100%" stop-color="#eef7f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="520" fill="url(#bg)"/>
+  <rect x="116" y="116" width="488" height="270" rx="18" fill="#ffffff" stroke="#003A81" stroke-width="4"/>
+  <rect x="180" y="174" width="84" height="84" fill="#dbe7f5"/>
+  <rect x="318" y="174" width="84" height="84" fill="#dbe7f5"/>
+  <rect x="456" y="174" width="84" height="84" fill="#dbe7f5"/>
+  <rect x="318" y="282" width="84" height="104" fill="#003A81"/>
+  <path d="M78 424h564c-70-58-133-87-190-87H268c-58 0-119 29-190 87Z" fill="#006F3F"/>
+  <text x="80" y="82" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#003A81">Replace with official DKU imagery if available</text>
+</svg>

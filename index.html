@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Duke Kunshan University calendar dashboard for students, faculty, and staff.">
+  <title>DKU Calendar | Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Duke Kunshan University Calendar home">
+        <img
+          class="brand-logo brand-logo--light"
+          src="assets/dku-logo-placeholder.svg"
+          alt="Duke Kunshan University"
+          data-asset-candidates="assets/dku-logo.svg,assets/dku-logo.png,assets/dku-logo-placeholder.svg,dku-logo.svg,dku-logo.png,logo.svg,logo.png"
+        >
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav id="primary-nav" class="site-nav">
+        <a href="about.html">About</a>
+        <a href="calendar.html">Academics</a>
+        <a href="events.html">Events</a>
+        <a href="calendar.html">Academic Calendar</a>
+        <a href="help.html">Contact / Help</a>
+        <a class="nav-login" href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero--split">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Duke Kunshan University</p>
+          <h1>A practical university calendar for campus life, deadlines, and academic planning.</h1>
+          <p class="hero-text">
+            Track course milestones, reading periods, final exams, campus events, workshops, and university announcements in one clear dashboard built for the DKU community.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="calendar.html">Open Calendar</a>
+            <a class="button button-secondary" href="events.html">Browse Events</a>
+            <a class="button button-tertiary" href="login.html">Admin Login</a>
+          </div>
+        </div>
+        <div class="hero-media card">
+          <img
+            src="assets/hero-campus-placeholder.svg"
+            alt="Duke Kunshan University campus illustration"
+            data-asset-candidates="assets/hero-campus.jpg,assets/hero-campus.png,assets/dku-campus.jpg,assets/dku-campus.png,hero-campus.jpg,hero-campus.png,dku-campus.jpg,dku-campus.png,assets/hero-campus-placeholder.svg"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Dashboard</p>
+            <h2>Quick access to what matters this month</h2>
+          </div>
+          <a class="text-link" href="help.html">How to use the system</a>
+        </div>
+        <div class="dashboard-grid">
+          <a class="feature-card" href="calendar.html">
+            <span class="feature-card__tag feature-card__tag--academic">Academic</span>
+            <h3>Monthly calendar</h3>
+            <p>Review class milestones, deadline clusters, and exam periods in a full calendar view.</p>
+          </a>
+          <a class="feature-card" href="events.html">
+            <span class="feature-card__tag feature-card__tag--exams">Exams</span>
+            <h3>Searchable event feed</h3>
+            <p>Filter by category, sort by date, and locate seminars, campus life events, and key academic items quickly.</p>
+          </a>
+          <a class="feature-card" href="calendar.html">
+            <span class="feature-card__tag feature-card__tag--deadline">Deadlines</span>
+            <h3>Important deadlines</h3>
+            <p>Keep registration deadlines, reading days, residence hall notices, and closure periods visible.</p>
+          </a>
+          <a class="feature-card" href="events.html">
+            <span class="feature-card__tag feature-card__tag--campus">Campus Life</span>
+            <h3>Campus activities</h3>
+            <p>Follow student club fairs, workshops, guest lectures, and campus-wide announcements.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container content-grid">
+        <div class="panel">
+          <div class="section-heading section-heading--compact">
+            <div>
+              <p class="eyebrow">Upcoming</p>
+              <h2>Next events</h2>
+            </div>
+            <a class="text-link" href="events.html">View all</a>
+          </div>
+          <div id="homepage-upcoming" class="stack-list" aria-live="polite"></div>
+        </div>
+
+        <div class="panel">
+          <div class="section-heading section-heading--compact">
+            <div>
+              <p class="eyebrow">Priority</p>
+              <h2>Important deadlines</h2>
+            </div>
+            <a class="text-link" href="calendar.html">Open academic calendar</a>
+          </div>
+          <div id="homepage-deadlines" class="stack-list" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Categories</p>
+            <h2>Built for students, faculty, and staff</h2>
+          </div>
+        </div>
+        <div class="category-grid">
+          <article class="category-card">
+            <h3>Academic</h3>
+            <p>Semester starts, reading periods, add/drop checkpoints, and instructional milestones.</p>
+          </article>
+          <article class="category-card">
+            <h3>Exams</h3>
+            <p>Midterm windows, final examinations, and examination-period reminders.</p>
+          </article>
+          <article class="category-card">
+            <h3>Registration</h3>
+            <p>Course registration deadlines, advising reminders, and schedule planning checkpoints.</p>
+          </article>
+          <article class="category-card">
+            <h3>Workshops</h3>
+            <p>Library sessions, career development workshops, and faculty or guest-led seminars.</p>
+          </article>
+          <article class="category-card">
+            <h3>Campus Life</h3>
+            <p>Club fairs, residence hall updates, student activities, and community programming.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img
+          class="brand-logo brand-logo--footer"
+          src="assets/dku-logo-reversed-placeholder.svg"
+          alt="Duke Kunshan University"
+          data-asset-candidates="assets/dku-logo-reversed.svg,assets/dku-logo-white.png,assets/dku-logo-reversed-placeholder.svg"
+        >
+        <p class="footer-copy">Prototype university calendar for Duke Kunshan University, Kunshan, China.</p>
+      </div>
+      <div>
+        <h3>Resources</h3>
+        <a href="calendar.html">Academic Calendar</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About DKU</a>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <a href="help.html">Help & FAQ</a>
+        <a href="login.html">Testing Login</a>
+        <a href="help.html">Maps & Directions</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>No. 8 Duke Avenue, Kunshan, Jiangsu, China</p>
+        <p>Calendar prototype for local offline testing.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

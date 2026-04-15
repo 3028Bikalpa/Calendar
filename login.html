@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Testing login for the DKU calendar prototype.">
+  <title>DKU Calendar | Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Duke Kunshan University Calendar home">
+        <img class="brand-logo brand-logo--light" src="assets/dku-logo-placeholder.svg" alt="Duke Kunshan University" data-asset-candidates="assets/dku-logo.svg,assets/dku-logo.png,assets/dku-logo-placeholder.svg,dku-logo.svg,dku-logo.png,logo.svg,logo.png">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav id="primary-nav" class="site-nav">
+        <a href="about.html">About</a>
+        <a href="calendar.html">Academics</a>
+        <a href="events.html">Events</a>
+        <a href="calendar.html">Academic Calendar</a>
+        <a href="help.html">Contact / Help</a>
+        <a class="nav-login" href="login.html" aria-current="page">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow-container">
+      <section class="panel auth-panel">
+        <p class="eyebrow">Testing Access</p>
+        <h1>Admin login</h1>
+        <p>Use the prototype credentials to access the local admin page and add events for testing.</p>
+        <form id="login-form" class="form-grid" novalidate>
+          <label>
+            <span>Username</span>
+            <input id="username" name="username" type="text" autocomplete="username" required>
+          </label>
+          <label>
+            <span>Password</span>
+            <input id="password" name="password" type="password" autocomplete="current-password" required>
+          </label>
+          <button class="button button-primary" type="submit">Sign in</button>
+        </form>
+        <p id="login-message" class="form-message" aria-live="polite"></p>
+        <div class="credentials-box">
+          <h2>Testing credentials</h2>
+          <p><strong>Username:</strong> bikki</p>
+          <p><strong>Password:</strong> bikki</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="brand-logo brand-logo--footer" src="assets/dku-logo-reversed-placeholder.svg" alt="Duke Kunshan University" data-asset-candidates="assets/dku-logo-reversed.svg,assets/dku-logo-white.png,assets/dku-logo-reversed-placeholder.svg">
+        <p class="footer-copy">Prototype university calendar for Duke Kunshan University, Kunshan, China.</p>
+      </div>
+      <div>
+        <h3>Resources</h3>
+        <a href="calendar.html">Academic Calendar</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About DKU</a>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <a href="help.html">Help & FAQ</a>
+        <a href="login.html">Testing Login</a>
+        <a href="help.html">Maps & Directions</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>No. 8 Duke Avenue, Kunshan, Jiangsu, China</p>
+        <p>Calendar prototype for local offline testing.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

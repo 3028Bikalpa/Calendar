@@ -1,0 +1,622 @@
+:root {
+  --dku-blue: #003a81;
+  --dku-green: #006f3f;
+  --dku-blue-deep: #032a59;
+  --ink: #10243f;
+  --muted: #5c6b7b;
+  --border: #d8e0eb;
+  --surface: #ffffff;
+  --surface-muted: #f4f7fb;
+  --surface-accent: linear-gradient(135deg, rgba(0, 58, 129, 0.08), rgba(0, 111, 63, 0.08));
+  --shadow: 0 20px 50px rgba(6, 29, 59, 0.08);
+  --radius: 18px;
+  --radius-sm: 12px;
+  --container: 1160px;
+  --academic: #003a81;
+  --exams: #7f1d1d;
+  --registration: #0b5cab;
+  --deadlines: #9a3412;
+  --holidays: #006f3f;
+  --campus-life: #6b21a8;
+  --clubs: #0f766e;
+  --workshops: #8a5a00;
+  --seminars: #475569;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: linear-gradient(180deg, #fbfdff 0%, #f4f7fb 100%);
+  line-height: 1.55;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.container {
+  width: min(calc(100% - 2rem), var(--container));
+  margin: 0 auto;
+}
+
+.narrow-container {
+  width: min(calc(100% - 2rem), 700px);
+}
+
+.section {
+  padding: 4.5rem 0;
+}
+
+.section-tight {
+  padding-top: 1.5rem;
+  padding-bottom: 0;
+}
+
+.section-muted {
+  background: rgba(255, 255, 255, 0.65);
+  border-top: 1px solid rgba(216, 224, 235, 0.8);
+  border-bottom: 1px solid rgba(216, 224, 235, 0.8);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(216, 224, 235, 0.85);
+}
+
+.site-header .container,
+.footer-grid,
+.hero-grid,
+.content-grid,
+.dashboard-grid,
+.category-grid,
+.about-grid,
+.faq-grid,
+.info-strip,
+.calendar-layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.site-header .container {
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  min-height: 84px;
+}
+
+.brand-logo {
+  height: 50px;
+  width: auto;
+}
+
+.brand-logo--footer {
+  height: 42px;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  align-items: center;
+}
+
+.site-nav a {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--dku-blue);
+}
+
+.nav-login {
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(0, 58, 129, 0.18);
+  border-radius: 999px;
+}
+
+.nav-toggle {
+  display: none;
+  justify-self: end;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  color: var(--dku-blue);
+}
+
+.hero {
+  padding: 5rem 0 3rem;
+}
+
+.hero--split {
+  background:
+    radial-gradient(circle at top right, rgba(0, 111, 63, 0.14), transparent 30%),
+    radial-gradient(circle at left top, rgba(0, 58, 129, 0.12), transparent 40%);
+}
+
+.hero-grid,
+.content-grid,
+.about-grid,
+.calendar-layout {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.hero-copy h1,
+.page-heading h1 {
+  margin: 0;
+  font-family: Baskerville, Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1.15;
+  color: var(--dku-blue-deep);
+}
+
+.hero-text,
+.page-heading p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+.hero-media,
+.panel,
+.feature-card,
+.category-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(216, 224, 235, 0.8);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero-media {
+  overflow: hidden;
+  min-height: 360px;
+}
+
+.hero-media img,
+.media-illustration {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 0.8rem;
+  color: var(--dku-green);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.hero-actions,
+.calendar-toolbar,
+.page-heading--split {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  min-height: 46px;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  color: #fff;
+  background: linear-gradient(135deg, var(--dku-blue), #0b56b6);
+  box-shadow: 0 12px 24px rgba(0, 58, 129, 0.18);
+}
+
+.button-secondary {
+  color: var(--dku-blue);
+  background: #fff;
+  border-color: rgba(0, 58, 129, 0.18);
+}
+
+.button-tertiary {
+  color: var(--dku-green);
+  background: rgba(0, 111, 63, 0.08);
+}
+
+.section-heading,
+.page-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+.section-heading--compact {
+  align-items: start;
+}
+
+.section-heading h2,
+.panel h2,
+.credentials-box h2 {
+  margin: 0;
+  font-family: Baskerville, Georgia, "Times New Roman", serif;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  color: var(--dku-blue-deep);
+}
+
+.text-link {
+  color: var(--dku-blue);
+  font-weight: 700;
+}
+
+.dashboard-grid,
+.category-grid,
+.faq-grid,
+.events-grid,
+.info-strip {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.feature-card,
+.category-card,
+.panel {
+  padding: 1.5rem;
+}
+
+.feature-card:hover,
+.category-card:hover {
+  border-color: rgba(0, 58, 129, 0.3);
+}
+
+.feature-card h3,
+.category-card h3,
+.event-card h3,
+.stack-item h3,
+.info-strip h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--dku-blue-deep);
+}
+
+.feature-card__tag,
+.event-tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.feature-card__tag--academic,
+.event-tag--Academic { background: var(--academic); }
+.feature-card__tag--exams,
+.event-tag--Exams { background: var(--exams); }
+.feature-card__tag--deadline,
+.event-tag--Deadlines { background: var(--deadlines); }
+.feature-card__tag--campus,
+.event-tag--campus-life { background: var(--campus-life); }
+.event-tag--registration { background: var(--registration); }
+.event-tag--holidays { background: var(--holidays); }
+.event-tag--clubs { background: var(--clubs); }
+.event-tag--workshops { background: var(--workshops); }
+.event-tag--seminars { background: var(--seminars); }
+.event-tag--academic { background: var(--academic); }
+.event-tag--exams { background: var(--exams); }
+.event-tag--deadlines { background: var(--deadlines); }
+
+.stack-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.stack-item,
+.event-card {
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--dku-blue);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  padding: 1rem 1.1rem;
+}
+
+.stack-item[data-category="Academic"],
+.event-card[data-category="Academic"] { border-left-color: var(--academic); }
+.stack-item[data-category="Exams"],
+.event-card[data-category="Exams"] { border-left-color: var(--exams); }
+.stack-item[data-category="Registration"],
+.event-card[data-category="Registration"] { border-left-color: var(--registration); }
+.stack-item[data-category="Deadlines"],
+.event-card[data-category="Deadlines"] { border-left-color: var(--deadlines); }
+.stack-item[data-category="Holidays"],
+.event-card[data-category="Holidays"] { border-left-color: var(--holidays); }
+.stack-item[data-category="Campus Life"],
+.event-card[data-category="Campus Life"] { border-left-color: var(--campus-life); }
+.stack-item[data-category="Clubs"],
+.event-card[data-category="Clubs"] { border-left-color: var(--clubs); }
+.stack-item[data-category="Workshops"],
+.event-card[data-category="Workshops"] { border-left-color: var(--workshops); }
+.stack-item[data-category="Seminars"],
+.event-card[data-category="Seminars"] { border-left-color: var(--seminars); }
+
+.meta,
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.site-footer {
+  background: linear-gradient(135deg, var(--dku-blue-deep), var(--dku-blue));
+  color: rgba(255, 255, 255, 0.88);
+  padding: 3rem 0;
+  margin-top: 3rem;
+}
+
+.footer-grid {
+  grid-template-columns: 2fr 1fr 1fr 1.3fr;
+}
+
+.site-footer h3 {
+  color: #fff;
+  margin-top: 0;
+}
+
+.site-footer a {
+  display: block;
+  margin: 0.4rem 0;
+}
+
+.footer-copy {
+  max-width: 32ch;
+}
+
+.filters,
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.filters label,
+.form-grid label {
+  display: grid;
+  gap: 0.5rem;
+  color: var(--dku-blue-deep);
+  font-weight: 700;
+}
+
+.label-full {
+  grid-column: 1 / -1;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+  padding: 0.9rem 1rem;
+  color: var(--ink);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.calendar-day:focus-visible,
+.button:focus-visible,
+.nav-toggle:focus-visible {
+  outline: 3px solid rgba(0, 58, 129, 0.2);
+  outline-offset: 2px;
+}
+
+.results-summary,
+.form-message {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.form-message.is-error {
+  color: #991b1b;
+}
+
+.form-message.is-success {
+  color: var(--dku-green);
+}
+
+.credentials-box {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface-accent);
+}
+
+.auth-panel {
+  padding: 2rem;
+}
+
+.calendar-weekdays,
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.calendar-weekdays {
+  margin: 1.5rem 0 1rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.calendar-day {
+  min-height: 120px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fff;
+  padding: 0.8rem;
+  text-align: left;
+  display: grid;
+  align-content: start;
+  gap: 0.5rem;
+}
+
+.calendar-day.is-other-month {
+  background: #f8fafc;
+  color: #94a3b8;
+}
+
+.calendar-day.is-today {
+  border-color: var(--dku-green);
+  box-shadow: inset 0 0 0 2px rgba(0, 111, 63, 0.2);
+}
+
+.calendar-day.is-selected {
+  border-color: var(--dku-blue);
+  box-shadow: inset 0 0 0 2px rgba(0, 58, 129, 0.18);
+}
+
+.calendar-day__number {
+  font-weight: 700;
+}
+
+.calendar-day__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.calendar-badge {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
+
+.calendar-badge--academic { background: var(--academic); }
+.calendar-badge--exams { background: var(--exams); }
+.calendar-badge--registration { background: var(--registration); }
+.calendar-badge--deadlines { background: var(--deadlines); }
+.calendar-badge--holidays { background: var(--holidays); }
+.calendar-badge--campus-life { background: var(--campus-life); }
+.calendar-badge--clubs { background: var(--clubs); }
+.calendar-badge--workshops { background: var(--workshops); }
+.calendar-badge--seminars { background: var(--seminars); }
+
+.calendar-subtitle {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+}
+
+.empty-state {
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.info-strip article {
+  padding: 1.2rem;
+  border-radius: var(--radius-sm);
+  background: #fff;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 920px) {
+  .site-header .container {
+    grid-template-columns: auto auto;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    grid-column: 1 / -1;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .hero-grid,
+  .content-grid,
+  .about-grid,
+  .calendar-layout,
+  .footer-grid,
+  .filters,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-weekdays,
+  .calendar-grid {
+    gap: 0.45rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 3.4rem 0;
+  }
+
+  .hero {
+    padding-top: 3.5rem;
+  }
+
+  .calendar-day {
+    min-height: 88px;
+    padding: 0.65rem;
+  }
+
+  .calendar-weekdays {
+    font-size: 0.85rem;
+  }
+}
