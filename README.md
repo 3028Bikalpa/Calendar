@@ -22,7 +22,12 @@ The site is configured to prefer official files if you add them later. Common re
 - `assets/dku-campus.jpg`
 - `assets/about-campus.jpg`
 
-If those files are not present, the site uses clearly marked placeholders in `assets/`.
+If those files are not present, the site uses these placeholder files in `assets/`:
+
+- `assets/dku-logo-placeholder.png`
+- `assets/dku-logo-reversed-placeholder.avif`
+- `assets/hero-campus-placeholder.jpg`
+- `assets/campus-detail-placeholder.jpg`
 
 ## Data behavior
 
